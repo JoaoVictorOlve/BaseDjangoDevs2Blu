@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% include 'partials/menu.html' %}
+
+{% block content %}
+
+        <!-- Receipe Post Search -->
+        <div class="receipe-post-search mb-80">
+            <div class="container">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <select name="select1" id="select1">
+                                <option value="1">Softskill</option>
+                                <option value="1">HardSkill</option>
+                                <option value="1">workspace</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-2 text-right">
+                            <button type="submit" class="btn delicious-btn">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Receipe Slider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="receipe-slider owl-carousel">
+                        <img src="{% static 'img/bg-img/escritorio.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Receipe Content Area -->
+        <div class="receipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="receipe-headline my-5">
+                            <span>{{aluno.date_aluno}}</span>
+                            <h2>{{aluno.nome_aluno}}</h2>
+                            <div class="receipe-duration">
+                                <h6>Habilidades: {{aluno.habilidades}}</h6>
+                                <h6>Comportamento: {{aluno.comportamento}}</h6>
+                                <h6>Workspace: {{aluno.workspace}}</h6>
+                                <h6>Por: Pessoa</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <p>{{aluno.descricao_profissional}}. </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredientes -->
+                    <div class="col-12 col-lg-4">
+                        <div class="ingredients">
+                            <h4>Descrição</h4>
+                            <div class="ingredients">
+                                <p>{{aluno.descricao_pessoal}}. </p>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock %}
+
+{% include 'partials/footer.html' %}
